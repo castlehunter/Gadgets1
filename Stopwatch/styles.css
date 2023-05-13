@@ -1,0 +1,268 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    height: 100%;
+    font-family: Microsoft YaHei;
+    background-color: #a0c6c7;
+}
+
+main {
+    margin: 0 auto;
+    height: 100%;
+}
+
+#board {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 90rem;
+    padding: 1rem 0rem 1rem 0rem;
+    background-size: 100%;
+    background-color: #f4dac1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.title {
+    background-color: #494949;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 1rem 0;
+    font-weight: 600;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+/* -------------------- Navigation -----------*/
+
+nav {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px auto;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    color: #494949;
+    padding: 0.1rem 1rem 0.2rem 1rem;
+    border-radius: 0.4rem;
+    background-color: #a3a3a3;
+    border: 0.1rem solid rgb(46, 46, 46);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #494949;
+    background-color: #ffd57c;
+}
+
+nav a:active {
+    background-color: #ffae00;
+    color: #494949;
+}
+
+.current {
+    background-color: #ffd57c;
+}
+
+
+/*----------------- Dashboard -------------------*/
+
+.dash1 {
+    padding: 0rem 1.2rem;
+}
+
+#dashboard {
+    text-align: center;
+    padding: 0rem 0;
+    margin-bottom: 1.3rem;
+    /* border: 0.3rem solid #383838;
+    border: 0.3rem solid #c4c4c4; */
+    border: 0.3rem solid #838383;
+    /*background-color: #494a4b; */
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    border-radius: 0.8rem;
+    width: 100%;
+}
+
+#dashboard.dashbg {
+    background: linear-gradient(to right, rgba(255, 227, 133) 50%, transparent 0);
+    background: linear-gradient(to right, #89b000 50%, transparent 0);
+    background: linear-gradient(to right, #b5ff70 50%, transparent 0);
+    background: linear-gradient(to right, rgb(20, 58, 88) 50%, transparent 0);
+    background-size: 200% 100%;
+    background-position: right;
+    animation: makeItfadeIn 1.2s 0s forwards;
+}
+
+@keyframes makeItfadeIn {
+    100% {
+        background-position: left;
+    }
+}
+
+#dashboard.winbg {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #971919 50%);
+    background-size: 100% 200%;
+    background-position: bottom;
+    transition: all 0.5s ease-out;
+}
+
+
+/* --------------- Counter and Timer ----------------*/
+
+#counterTimer {
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 0.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.barOuter {
+    margin: 0.7rem auto;
+    background: #3f3f3f;
+    border: 0.1rem solid rgb(167, 167, 167);
+    border-radius: 8px;
+    box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, 1), 1px 1px 3px 0 rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0.1rem 0.1rem 0.3rem 0 rgba(0, 0, 0, 1), 0.1rem 0.1rem 0.4rem 0 rgba(255, 255, 255, 0.12);
+    height: 1.2rem;
+    width: 70%;
+    position: relative;
+}
+
+
+/* ---------------- Restart Button Start -----------------------*/
+
+#topline {
+    display: flex;
+    justify-content: center;
+}
+
+#restartButton {
+    margin: 0.4rem 0 0.4rem 0.4rem;
+    padding: 0.3rem 0.3rem;
+    border: 0.1rem solid white;
+    font-size: 0.9rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+#restartButton.hide {
+    display: none;
+}
+
+#restartButton:active {
+    transform: translateY(0px);
+}
+
+#restartText {
+    margin: 5px 0px;
+}
+
+#restartButton:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #55adff, #73fa66, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    -webkit-border-radius: 0.6rem;
+    -moz-border-radius: 0.6rem;
+    border-radius: 0.6rem;
+}
+
+#restartButton:active {
+    color: #000
+}
+
+#restartButton:active:after {
+    background: transparent;
+}
+
+#restartButton:hover:before {
+    opacity: 1;
+}
+
+#restartButton:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    border-radius: 0.4rem;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+#colorPicker {
+    padding: 0.1rem 0.8rem 0.2rem 0.8rem;
+    border: 0.2rem solid white;
+    border-radius: 1rem;
+    background-color: #ffd57c;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#link {
+    padding: 0.1rem 0.8rem 0.2rem 0.8rem;
+    border: 0.2rem solid white;
+    border-radius: 1rem;
+    color: white;
+    background-color: #6d2200;
+    background-color: #ad3700;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#link img {
+    width: 1.1rem;
+}
+
+#colorPicker:active {
+    background-color: #d39000;
+}
